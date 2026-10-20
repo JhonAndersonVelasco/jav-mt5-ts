@@ -1,0 +1,53 @@
+{
+  "name": "jav-mt5",
+  "version": "0.1.0",
+  "description": "Typed TypeScript / Node.js client for MetaTrader 5 MCP servers",
+  "type": "module",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": {
+        "types": "./dist/index.d.ts",
+        "default": "./dist/index.js"
+      },
+      "require": {
+        "types": "./dist/index.d.cts",
+        "default": "./dist/index.cjs"
+      }
+    }
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "build": "tsup",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "prepublishOnly": "npm run test && npm run build"
+  },
+  "keywords": [
+    "metatrader5",
+    "mt5",
+    "mcp",
+    "trading",
+    "finance",
+    "typescript",
+    "nodejs"
+  ],
+  "author": "Jhon Anderson Velasco <javskrill@gmail.com>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/JhonAndersonVelasco/jav-mt5-ts.git"
+  },
+  "devDependencies": {
+    "@types/node": "^24.1.0",
+    "tsup": "^9.0.0",
+    "typescript": "^5.8.2",
+    "vitest": "^5.0.5"
+  }
+}
